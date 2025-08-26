@@ -1,0 +1,40 @@
+.gradient-bg {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(79, 70, 229, 0.9) 50%, rgba(99, 102, 241, 0.9) 100%);
+}
+.ai-bg {
+    background-image: url('https://cdn.pixabay.com/photo/2019/10/15/08/47/artificial-intelligence-4550604_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.ai-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+}
+.comparison-card {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.arrow-animation {
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
